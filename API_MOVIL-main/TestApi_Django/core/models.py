@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 class Alumno(models.Model):
     idAlumno = models.IntegerField(primary_key=True, verbose_name = "Id de Usuario")
-    Gmail = models.CharField(max_length=50, verbose_name = "Gmail")
-    password = models.CharField(max_length=50, verbose_name = "Contrasena")
-    user = models.CharField(max_length=50, verbose_name = "Nombre de Usuario")
+    Gmail = models.CharField(max_length=50, verbose_name = "Gmail", default=None, null=True)
+    password = models.CharField(max_length=50, verbose_name = "Contrasena", default=None, null=True)
+    user = models.CharField(max_length=50, verbose_name = "Nombre de Usuario", default=None, null=True)
 
     def __str__(self):
         return self.user
